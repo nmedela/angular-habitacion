@@ -1,0 +1,31 @@
+.menu-container {
+    position: absolute;
+    width: 15em;
+    background-color:whitesmoke;
+    border: 1px solid;
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:whitesmoke;
+  }
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  }
+.boton-menu{
+  background-color: black;
+  color: blanchedalmond;
+  font: 1.5em bold ;
+}
+.navbar{
+  position: relative;
+  background-color: black;
+  border-bottom: 2px solid gray;
+}
+.item-lista{
+  margin-top: 1.5em;
+}
