@@ -2,14 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {MatMenuModule,MatRadioModule,MatButtonModule,MatSidenavModule,MatIconModule,MatListModule,
-  MatDividerModule,MatToolbarModule,MatGridListModule} from '@angular/material'
+  MatDividerModule,MatToolbarModule,MatGridListModule,MatProgressSpinnerModule} from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AudioComponent } from './componentes/audio/audio.component';
 import { LucesComponent } from './componentes/luces/luces.component';
+import { LuzDimmerComponent} from './componentes/luzDimmer/luzDimmer.component'
 import { ControlRemotoComponent} from './componentes/controlRemoto/controlRemoto.component'
+import {MatSliderModule} from '@angular/material/slider';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { GestureConfig } from '@angular/material';
+import { } from 'hammerjs';
 
 export const appRoutes: Routes = [
   {
@@ -27,7 +32,8 @@ export const appRoutes: Routes = [
     AppComponent,
     AudioComponent,
     LucesComponent,
-    ControlRemotoComponent
+    ControlRemotoComponent,
+    LuzDimmerComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +50,11 @@ export const appRoutes: Routes = [
     MatListModule,
     MatDividerModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSliderModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [ { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

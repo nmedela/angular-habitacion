@@ -1,4 +1,8 @@
 {
+
+  "types": [
+    "jasmine", "hammerjs"
+    ],
   "compileOnSave": false,
   "compilerOptions": {
     "paths": { "*": ["types/*"] },

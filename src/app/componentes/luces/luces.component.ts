@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./luces.component.css']
 })
 export class LucesComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
   }
 
