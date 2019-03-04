@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AudioComponent } from './componentes/audio/audio.component';
 import { LucesComponent } from './componentes/luces/luces.component';
 import { LuzDimmerComponent} from './componentes/luzDimmer/luzDimmer.component'
+import { HttpClientModule } from '@angular/common/http'
 import { ControlRemotoComponent} from './componentes/controlRemoto/controlRemoto.component'
 import {MatSliderModule} from '@angular/material/slider';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
@@ -52,7 +53,8 @@ export const appRoutes: Routes = [
     MatToolbarModule,
     MatGridListModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule,
   ],
   providers: [ { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
