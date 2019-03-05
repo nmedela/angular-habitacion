@@ -1,19 +1,16 @@
-<mat-grid-list  style="width: 20em;"cols="3" rowHeight="2em">
-    <mat-grid-tile [colspan]="3"
-    [rowspan]="1"> 
-    <P class="LuzLabel">{{ nombre }}</P>
-    <p>{{this.luz.id}}</p>
-</mat-grid-tile>
-<mat-grid-tile [colspan]="3"
-[rowspan]="1"> 
-<mat-icon style="color: yellow;">brightness_high</mat-icon>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3"
-    [rowspan]="5">
-        <mat-slider vertical thumbLabel  [displayWith]="formatLabel" step="1" tickInterval="1" min="0" max="26" [(ngModel)]="this.posicion"></mat-slider>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3"
-    [rowspan]="1">
-        <mat-icon style="color: gray;">brightness_low</mat-icon>
-    </mat-grid-tile >
-  </mat-grid-list>
+
+    <mat-grid-list style="width: 20em;" cols="3" rowHeight="2em">
+        <mat-grid-tile [colspan]="3" [rowspan]="1">
+            <P class="LuzLabel">{{ nombre }}</P>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="1">
+            <mat-icon style="color: yellow;">brightness_high</mat-icon>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="5">
+            <mat-slider [disabled]="deshabilitar" vertical thumbLabel [displayWith]="formatLabel" step="1" tickInterval="1" min="0" max="26"
+                [(ngModel)]="this.posicion" (change)="onInputChange()"></mat-slider>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="1">
+            <mat-icon style="color: gray;">brightness_low</mat-icon>
+        </mat-grid-tile>
+    </mat-grid-list>

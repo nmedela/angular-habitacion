@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {MatMenuModule,MatRadioModule,MatButtonModule,MatSidenavModule,MatIconModule,MatListModule,
-  MatDividerModule,MatToolbarModule,MatGridListModule,MatProgressSpinnerModule} from '@angular/material'
+  MatDividerModule,MatToolbarModule,MatGridListModule,MatProgressSpinnerModule,MatSnackBarModule} from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -34,7 +34,7 @@ export const appRoutes: Routes = [
     AudioComponent,
     LucesComponent,
     ControlRemotoComponent,
-    LuzDimmerComponent
+    LuzDimmerComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +55,7 @@ export const appRoutes: Routes = [
     MatSliderModule,
     MatProgressSpinnerModule,
     HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [ { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
