@@ -10,7 +10,6 @@ export class LucesComponent implements OnInit {
   sinProcesar: boolean;
   disabled: boolean;
   constructor(private snackBar: MatSnackBar) {
-    // 
     this.cambiaValor = this.cambiaValor.bind(this);
     this.sinProcesar = true
     this.disabled = false
@@ -20,7 +19,6 @@ export class LucesComponent implements OnInit {
     if (this.disabled) {
         this.openSnackBar("Por favor Espere..","Procesando")
     }
-    // this.sinProcesar= !this.sinProcesar
   }
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
