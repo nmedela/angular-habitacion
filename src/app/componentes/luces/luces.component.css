@@ -1,1 +1,7 @@
 /** No CSS for this example */
+.button_principal{
+    width: 10em; height: 10em;
+}
+mat-grid-list{
+margin:2em;
+}

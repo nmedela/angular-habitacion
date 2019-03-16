@@ -55,7 +55,7 @@ export const appRoutes: Routes = [
     MatSliderModule,
     MatProgressSpinnerModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [ { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }],
   bootstrap: [AppComponent]
