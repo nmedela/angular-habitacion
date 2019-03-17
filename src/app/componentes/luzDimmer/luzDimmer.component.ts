@@ -18,7 +18,6 @@ export class LuzDimmerComponent implements OnInit {
   errors = [];
   constructor(lucesService: LuzServiceService) {
     this.luzService = lucesService
-    this.posicion = 0;
     this.deshabilitar = false
   }
 
@@ -33,8 +32,8 @@ export class LuzDimmerComponent implements OnInit {
     this.cambiaValor()
     this.luz.intensidad = 36 - valor
     try {
-      console.log(this.luz)
       await this.luzService.ejecutarLuz(this.luz)
+      // console.log(this.luz.intensidad)
     } catch (error) {
       console.log(this.errors.push(error.error))
     }
@@ -42,12 +41,12 @@ export class LuzDimmerComponent implements OnInit {
   }
   ngOnInit() {
     this.iniciar()
-    this.posicion=this.luz.intensidad
   }
   async iniciar() {
     try {
       this.luz = new Luz()
       this.luz = await this.luzService.getEstadoLuz(this.id)
+      this.posicion= 35 - this.luz.intensidad;
     } catch (error) {
       this.errors.push(error.error)
     }
