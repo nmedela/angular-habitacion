@@ -41,7 +41,16 @@ export class LuzDimmerComponent implements OnInit {
     this.cambiaValor()
   }
   ngOnInit() {
-    this.luz = new Luz(this.id, 0)
+    this.iniciar()
+    this.posicion=this.luz.intensidad
   }
+  async iniciar() {
+    try {
+      this.luz = new Luz()
+      this.luz = await this.luzService.getEstadoLuz(this.id)
+    } catch (error) {
+      this.errors.push(error.error)
+    }
 
+  }
 }

@@ -5,7 +5,7 @@
         </mat-grid-tile>
         <mat-grid-tile [colspan]="3" [rowspan]=7>
             <mat-slider class="slider-class" [disabled]="deshabilitar" vertical thumbLabel [displayWith]="formatLabel"
-            step="1" tickInterval="1" min="0" max="26" [(ngModel)]="this.posicion" (change)="onInputChange()">
+            step="1" tickInterval="1" min="0" max="26" (ngModel)="this.posicion" (change)="onInputChange()">
         </mat-slider>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="3" [rowspan]="1">

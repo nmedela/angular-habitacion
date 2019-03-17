@@ -1,17 +1,20 @@
 export default class Luz {
-    id:number=0;
-    intensidad: number=0;
-  constructor(_id :number, _intensidad : number){
-    this.id=_id
-    this.intensidad=_intensidad
-  }
+  id: number = 0;
+  intensidad: number = 0;
 
-    // static fromJson(luzJSON) {
-    //   const result: Luz = Object.assign(new Luz(), luzJSON)
-    //   return result
-    // }
-    toJSON(): any {
-      const result: any = Object.assign({}, this)
-      return result
+  constructor(){}
+  
+
+  // static fromJson(luzJSON) {
+  //   const result: Luz = Object.assign(new Luz(), luzJSON)
+  //   return result
+  // }
+  toJSON(): any {
+    const result: any = Object.assign({}, this)
+    return result
+  }
+  fromJson(luzJson: Object):any {
+    const result: Luz = Object.assign(new Luz(), luzJson)
+    return result
   }
 }
