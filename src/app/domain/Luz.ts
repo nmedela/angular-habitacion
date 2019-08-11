@@ -1,6 +1,6 @@
 export default class Luz {
   id: number = 0;
-  intensidad: number = 0;
+  intensity: number = 0;
 
   constructor(){}
   

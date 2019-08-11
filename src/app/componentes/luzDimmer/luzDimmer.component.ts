@@ -30,7 +30,7 @@ export class LuzDimmerComponent implements OnInit {
   }
   async cambiarIntensidad(valor: number) {
     this.cambiaValor()
-    this.luz.intensidad = 36 - valor
+    this.luz.intensity = 36 - valor
     try {
       await this.luzService.ejecutarLuz(this.luz)
       // console.log(this.luz.intensidad)
@@ -46,7 +46,7 @@ export class LuzDimmerComponent implements OnInit {
     try {
       this.luz = new Luz()
       this.luz = await this.luzService.getEstadoLuz(this.id)
-      this.posicion= 35 - this.luz.intensidad;
+      this.posicion= 35 - this.luz.intensity;
     } catch (error) {
       this.errors.push(error.error)
     }
