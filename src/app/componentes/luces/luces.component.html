@@ -1,13 +1,13 @@
 
 <mat-grid-list cols="4" rowHeight="20em" >
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <app-luzDimmer [deshabilitar]="disabled" [cambiaValor]="cambiaValor" nombre="Izquierda" id="1">
+        <app-luzDimmer [deshabilitar]="disabled" [cambiaValor]="cambiaValor" nombre="Izquierda" id="0">
         </app-luzDimmer>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="1">
             <button mat-raised-button class="button_principal" [disabled]="true">Luz principal</button>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="1">
-        <app-luzDimmer [deshabilitar]="disabled" [cambiaValor]="cambiaValor" nombre="Derecha" id="2"></app-luzDimmer>
+        <app-luzDimmer [deshabilitar]="disabled" [cambiaValor]="cambiaValor" nombre="Derecha" id="1"></app-luzDimmer>
     </mat-grid-tile>
 </mat-grid-list>
